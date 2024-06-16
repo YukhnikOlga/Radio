@@ -27,6 +27,18 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldMoreMAxRadioStationAfterMax() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(10);
+        radio.setNextRadioStation();
+
+        int expected = 1;
+        int actual = radio.getCurrentRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldPrevRadioStation() {
         Radio radio = new Radio();
 
@@ -98,6 +110,19 @@ public class RadioTest {
 
         int expected = 0;
         int actual = volume.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldMoreMaxVolume() {
+        Radio volume = new Radio();
+        volume.setCurrentVolume(110);
+
+        volume.setUpVolume();
+
+        int expected = 1;
+        int actual = volume.getCurrentVolume();
+
         Assertions.assertEquals(expected, actual);
     }
 }
