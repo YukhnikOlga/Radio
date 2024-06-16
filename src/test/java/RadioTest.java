@@ -6,7 +6,6 @@ public class RadioTest {
     @Test
     public void shouldNextRadioStation() {
         Radio radio = new Radio();
-
         radio.setNextRadioStation();
 
         int expected = 1;
@@ -74,8 +73,8 @@ public class RadioTest {
     @Test
     public void shouldUpVolume() {
         Radio volume = new Radio();
-        volume.setCurrentVolume(11);
 
+        volume.setCurrentVolume(11);
         volume.setUpVolume();
 
         int expected = 12;
@@ -131,6 +130,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldCurrentVolumeMax() {
         Radio volume = new Radio();
