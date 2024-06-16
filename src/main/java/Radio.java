@@ -22,42 +22,29 @@ public class Radio {
             currentRadioStation = currentRadioStation - 1;
         } else currentRadioStation = 9;
     }
+
     public void setNextRadioStation() {
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
         } else currentRadioStation = 0;
-        }
+    }
 
     public void setCurrentVolume(int newCurrentVolume) {
         if (newCurrentVolume > 100) {
             return;
         }
         currentVolume = newCurrentVolume;
-        }
+    }
 
-        public void setUpVolume() {
+    public void setUpVolume() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         } else currentVolume = 0;
-        }
+    }
 
     public void setDownVolume() {
         if (currentVolume > 0) {
             this.currentVolume = currentVolume - 1;
         }
     }
-    }
-//
-//    public void setToMinRadioStation() {
-//        currentRadioStation = 0;
-//    }
-//    public void setToMaxRadioStation() {
-//        currentRadioStation = 9;
-//    }
-
-//    public void setToMinVolume() {
-//        currentVolume = 0;
-//    }
-//    public void setToMaxVolume() {
-//        currentVolume = 100;
-//    }
+}
